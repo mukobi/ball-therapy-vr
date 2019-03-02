@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.balltherapyvr.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\Gabe\\Documents\\GitHub\\ball-therapy-vr\\Ball Therapy VR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "Ball Therapy VR [Testing]"
+        }
+      }
+    }
+  ]
+}
