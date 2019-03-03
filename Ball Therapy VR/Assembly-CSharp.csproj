@@ -60,10 +60,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BallScript.cs" />
-    <Compile Include="Assets\NewBehaviourScript.cs" />
-    <Compile Include="Assets\PathScript.cs" />
-    <Compile Include="Assets\TranslationFollower.cs" />
+    <Compile Include="Assets\Scripts\BallScript.cs" />
+    <Compile Include="Assets\Scripts\CalibrationScript.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\GameState.cs" />
+    <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Scripts\PathScript.cs" />
+    <Compile Include="Assets\Scripts\WinCanvasScript.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Gabe/Documents/GitHub/ball-therapy-vr/Ball Therapy VR/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
