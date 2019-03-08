@@ -6,9 +6,17 @@ public class BallScript : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if(gameObject.GetComponentInParent<PathScript>().objectToTrigger.tag == other.tag)
+        string triggerTag = gameObject.GetComponentInParent<PathScript>().isLeft ? "Left Controller" : "Right Controller";
+        Debug.Log("Look for " + triggerTag + ", found " + other.tag);
+        if (other.tag == triggerTag && transform.GetSiblingIndex() == 0) 
         {
-            gameObject.GetComponentInParent<PathScript>().advancePath(gameObject);
+            gameObject.GetComponentInParent<PathScript>().advancePath();
+            Explode();
         }
+    }
+
+    private void Explode()
+    {
+        Destroy(gameObject);
     }
 }

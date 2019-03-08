@@ -12,17 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Calibration.unity
     guid: bcca9dba7a656a946a76a8516912cc8e
   - enabled: 1
-    path: Assets/Scenes/Level 0.unity
-    guid: f0e24cf5c71c2664ea7adcf73f975062
-  - enabled: 1
-    path: Assets/Scenes/Level 1.unity
-    guid: 6e714ec8a2884d64aa622c5ffdf503ac
-  - enabled: 1
-    path: Assets/Scenes/Level 2.unity
-    guid: 2e381845b4e836948ad1bf3da76363e7
-  - enabled: 1
-    path: Assets/Scenes/Level 3.unity
-    guid: 2f23437c4ac52d141b576fdf3362986d
+    path: Assets/NatureStarterKit2/Scene/Demo.unity
+    guid: 2b02c29601fc84e49a18fde7fed33f95
   - enabled: 1
     path: Assets/Scenes/Endgame.unity
     guid: 0eac957af48555343a04f203d590bf0b
