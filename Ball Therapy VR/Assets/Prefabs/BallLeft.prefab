@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3485195508138720304}
   - component: {fileID: 5524490336654128782}
   m_Layer: 0
-  m_Name: Ball
+  m_Name: BallLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,6 +105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7fe55aafd5833f418e633acf0e03d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 5165512586404381322, guid: aa20a5fdf36135d429d96dba6f4c9b0a,
+    type: 3}
 --- !u!95 &5524490336654128782
 Animator:
   serializedVersion: 3

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BallScript : MonoBehaviour
 {
+    public GameObject explosionPrefab;
+
     private void OnTriggerEnter(Collider other)
     {
         string triggerTag = gameObject.GetComponentInParent<PathScript>().isLeft ? "Left Controller" : "Right Controller";
@@ -17,6 +19,7 @@ public class BallScript : MonoBehaviour
 
     private void Explode()
     {
+        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
