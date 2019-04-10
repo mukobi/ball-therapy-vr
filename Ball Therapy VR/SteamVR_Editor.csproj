@@ -60,15 +60,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_AutoEnableVR.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_Editor.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_Preferences.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_RenderModelEditor.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_Settings.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_SkyboxEditor.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_UnitySettingsWindow.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_Update.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_UpdateModeEditor.cs" />
+    <Compile Include="Assets\Res\SteamVR\Editor\SteamVR_AutoEnableVR.cs" />
+    <Compile Include="Assets\Res\SteamVR\Editor\SteamVR_Editor.cs" />
+    <Compile Include="Assets\Res\SteamVR\Editor\SteamVR_Preferences.cs" />
+    <Compile Include="Assets\Res\SteamVR\Editor\SteamVR_RenderModelEditor.cs" />
+    <Compile Include="Assets\Res\SteamVR\Editor\SteamVR_Settings.cs" />
+    <Compile Include="Assets\Res\SteamVR\Editor\SteamVR_SkyboxEditor.cs" />
+    <Compile Include="Assets\Res\SteamVR\Editor\SteamVR_UnitySettingsWindow.cs" />
+    <Compile Include="Assets\Res\SteamVR\Editor\SteamVR_Update.cs" />
+    <Compile Include="Assets\Res\SteamVR\Editor\SteamVR_UpdateModeEditor.cs" />
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>
@@ -304,10 +304,10 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="PackageManagerAssembly">
-      <HintPath>C:/Users/Gabe/Documents/GitHub/ball-therapy-vr/Ball Therapy VR/Assets/EffectExamples/Editor/PackageManagerAssembly/PackageManagerAssembly.dll</HintPath>
+      <HintPath>C:/Users/Gabe/Documents/GitHub/ball-therapy-vr/Ball Therapy VR/Assets/Res/EffectExamples/Editor/PackageManagerAssembly/PackageManagerAssembly.dll</HintPath>
     </Reference>
     <Reference Include="Valve.Newtonsoft.Json">
-      <HintPath>C:/Users/Gabe/Documents/GitHub/ball-therapy-vr/Ball Therapy VR/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
+      <HintPath>C:/Users/Gabe/Documents/GitHub/ball-therapy-vr/Ball Therapy VR/Assets/Res/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>C:/Users/Gabe/Documents/GitHub/ball-therapy-vr/Ball Therapy VR/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
