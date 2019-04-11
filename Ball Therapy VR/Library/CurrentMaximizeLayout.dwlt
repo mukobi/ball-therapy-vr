@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 2194
     height: 1142
-  m_MinSize: {x: 683, y: 498}
+  m_MinSize: {x: 681, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 17357
+  controlID: 1727
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -46,25 +46,25 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 330
-    y: 22
+    x: 328
+    y: 72.571434
     width: 1261
-    height: 732
+    height: 736
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 1
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000001000000
   m_TargetDisplay: 0
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -630.5
-    m_HBaseRangeMax: 630.5
-    m_VBaseRangeMin: -357.50003
-    m_VBaseRangeMax: 357.50003
+    m_HBaseRangeMin: -490.28574
+    m_HBaseRangeMax: 490.28574
+    m_VBaseRangeMin: -490.28574
+    m_VBaseRangeMax: 490.28574
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -73,7 +73,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -83,24 +83,24 @@ MonoBehaviour:
       x: 0
       y: 17
       width: 1261
-      height: 715
-    m_Scale: {x: 0.99999994, y: 0.99999994}
-    m_Translation: {x: 630.5, y: 357.5}
+      height: 719
+    m_Scale: {x: 0.7332459, y: 0.7332459}
+    m_Translation: {x: 630.5, y: 359.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -630.50006
-      y: -357.50003
-      width: 1261.0001
-      height: 715.00006
+      x: -859.87524
+      y: -490.28574
+      width: 1719.7505
+      height: 980.5715
     m_MinimalGUI: 1
-  m_defaultScale: 0.99999994
+  m_defaultScale: 0.7332459
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 1
-  m_LastWindowPixelSize: {x: 2206.75, y: 1281}
+  m_LastWindowPixelSize: {x: 2206.75, y: 1288}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -126,10 +126,10 @@ MonoBehaviour:
     y: 0
     width: 1593
     height: 1142
-  m_MinSize: {x: 406, y: 498}
+  m_MinSize: {x: 404, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 17358
+  controlID: 1728
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -151,10 +151,10 @@ MonoBehaviour:
     y: 0
     width: 1593
     height: 756
-  m_MinSize: {x: 406, y: 224}
-  m_MaxSize: {x: 8006, y: 4024}
+  m_MinSize: {x: 404, y: 224}
+  m_MaxSize: {x: 8004, y: 4024}
   vertical: 0
-  controlID: 17336
+  controlID: 1729
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -212,7 +212,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 362cfeff2a3bfeffd83ffeff5051feff4c60feff4e64feffa26afeff9a76feff6c87feffd2fbffffe41f000036540000c0590000a65f0000a85f000082660000ee6b0000e46f0000
+      m_ExpandedIDs: 8ef6ffff90f6ffffd4fbfffffc3e0000123f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -297,9 +297,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.7016276, y: 2.434815, z: 4.1112766}
+    m_Target: {x: 1.0268815, y: 0.048744082, z: -0.20831394}
     speed: 2
-    m_Value: {x: -1.7016276, y: 2.434815, z: 4.1112766}
+    m_Value: {x: 1.0268815, y: 0.048744082, z: -0.20831394}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -327,13 +327,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.06891496, y: 0.046045363, z: -0.0031848475, w: -0.9965543}
+    m_Target: {x: 0.037445903, y: -0.009321786, z: -0.00034995613, w: -0.9992551}
     speed: 2
-    m_Value: {x: -0.06891496, y: 0.046045363, z: -0.0031848475, w: -0.9965543}
+    m_Value: {x: 0.037445903, y: -0.009321786, z: -0.00034995613, w: -0.9992551}
   m_Size:
-    m_Target: 9.042131
+    m_Target: 2.8748999
     speed: 2
-    m_Value: 9.042131
+    m_Value: 2.8748999
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -518,20 +518,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Gabe\Documents\GitHub\ball-therapy-vr\Ball Therapy VR
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 1475}
-    m_SelectedIDs: 0c170000
-    m_LastClickedID: 5900
-    m_ExpandedIDs: 000000001a0f00001810000090100000d410000076120000061300002016000032170000521700008c1700001a180000241a0000561a0000581a00000a1b00004c1b00007c1d00009a1d0000a41d0000f23d0000f43d0000f63d0000f83d000000ca9a3b
+    scrollPos: {x: 0, y: 1491}
+    m_SelectedIDs: 0c1b0000
+    m_LastClickedID: 6924
+    m_ExpandedIDs: 00000000f20e0000f40f00006c100000b010000054120000e4120000081600001c1700003c170000781700000a1800001c1a00004e1a0000521a0000041b0000461b00007a1d0000981d0000a21d0000c43e0000c63e0000c83e0000ca3e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -559,7 +559,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001a0f00001810000090100000d410000076120000061300002016000032170000521700008c1700001a180000241a0000561a0000581a00000a1b00004c1b00007c1d00009a1d0000a41d0000f23d0000f43d0000f63d0000f83d000000ca9a3b
+    m_ExpandedIDs: 00000000f20e0000f40f00006c100000b010000054120000e4120000081600001c1700003c170000781700000a1800001c1a00004e1a0000521a0000041b0000461b00007a1d0000981d0000a21d0000c43e0000c63e0000c83e0000ca3e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -584,8 +584,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: d4180000
-    m_LastClickedInstanceID: 6356
+    m_SelectedInstanceIDs: 8ef6ffff
+    m_LastClickedInstanceID: -2418
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000f4340000a835000000000000
     m_RenameOverlay:
@@ -668,7 +668,7 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 18670
+  m_LastSelectedObjectID: -2418
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52

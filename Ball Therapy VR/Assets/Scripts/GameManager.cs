@@ -41,23 +41,6 @@ public class GameManager : MonoBehaviour
         FindObjectOfType<MusicManager>().StopMusic();
     }
 
-    //void LoadNextLevel()
-    //{
-    //    //Debug.Log("Start loading next level. " + Time.time);
-    //    StartCoroutine(LoadNextAsyncScene());
-    //}
-
-    //private IEnumerator LoadNextAsyncScene()
-    //{
-    //    AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
-    //    // Wait until the asynchronous scene fully loads
-    //    while (!asyncLoad.isDone)
-    //    {
-    //        //Debug.Log("Async loading. " + Time.time);
-    //        yield return null;
-    //    }
-    //}
-
     private void FadeToWhite()
     {
         //set start color
