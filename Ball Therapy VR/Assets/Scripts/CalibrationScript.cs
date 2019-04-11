@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using Valve.VR;
+using UnityEngine.SceneManagement;
 
 public class CalibrationScript : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class CalibrationScript : MonoBehaviour
         {
             doneCalibrating = true;
             GameState.armSpan = armDist / 2.0f;
-            FindObjectOfType<GameManager>().EndLevel();
+            FindObjectOfType<GameManager>().GoToLevel(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

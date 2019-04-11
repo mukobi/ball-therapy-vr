@@ -19,17 +19,16 @@ public class GameManager : MonoBehaviour
     {
         if(GameState.leftDone && GameState.rightDone)
         {
-            EndLevel();
+            GoToLevel(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
-    public void EndLevel()
+    public void GoToLevel(int levelNum)
     {
         StopMusic();
         FadeToWhite();
-        int index = SceneManager.GetActiveScene().buildIndex + 1;
         string[] scenesList = { "Calibration", "Level 1", "Level 2", "Level 3", "Level 4", "Endgame" };
-        string nextLevelName = scenesList[index];
+        string nextLevelName = scenesList[levelNum];
         Debug.Log("Loading: " + nextLevelName);
         GetComponent<SteamVR_LoadLevel>().levelName = nextLevelName;
         GetComponent<SteamVR_LoadLevel>().Trigger();
