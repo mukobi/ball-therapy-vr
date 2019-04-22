@@ -1,28 +1,27 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using Valve.VR;
 using UnityEngine.SceneManagement;
 
 public class CalibrationScript : MonoBehaviour
 {
-    private float armDist;
+    private float height;
     
-    public GameObject leftController;
-    public GameObject rightController;
-    public Text displayText;
+    public GameObject playerCamera;
 
     private bool doneCalibrating = false;
 
     // Update is called once per frame
     void Update()
     {
-        armDist = Vector3.Distance(leftController.transform.position, rightController.transform.position);
-        displayText.text = "Measured Arm Span: " + armDist.ToString("N3") + " m";
-
-        if(!doneCalibrating && SteamVR_Input.GetBooleanAction("InteractUI").state)  // interact button pressed
+        if (!doneCalibrating 
+            && SteamVR_Actions.default_InteractUI[SteamVR_Input_Sources.LeftHand].state
+            && SteamVR_Actions.default_InteractUI[SteamVR_Input_Sources.RightHand].state)  // interact buttons both pressed
         {
+            const int cameraRigScale = 5;
+            height = playerCamera.transform.position.y / cameraRigScale;
+            Debug.Log("Height: " + height);
             doneCalibrating = true;
-            GameState.armSpan = armDist / 2.0f;
+            GameState.armSpan = height / 2.0f;
             FindObjectOfType<GameManager>().GoToLevel(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
