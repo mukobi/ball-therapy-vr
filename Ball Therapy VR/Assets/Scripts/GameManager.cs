@@ -1,18 +1,21 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using Valve.VR;
 
 public class GameManager : MonoBehaviour
 {
-    private float _fadeDuration = 5f;
+    GameManager instance = null;
 
     private void Start()
     {
-        FadeFromWhite();
+        if (instance != null)
+        {
+            Destroy(this);
+        }
+        else instance = this;
+        FadeScreenIn();
         GameState.leftDone = false;
         GameState.rightDone = false;
-        Debug.Log("GameManager Started. " + Time.time);
     }
     
     public void CheckWin()
@@ -23,16 +26,22 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
+    [ContextMenu("Go To Next Level")]
+    public void GoToNextLevel()
+    {
+        GoToLevel(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
     public void GoToLevel(int levelNum)
     {
         StopMusic();
-        FadeToWhite();
+        FadeScreenOut();
         string[] scenesList = { "Calibration", "Level 1", "Level 2", "Level 3", "Level 4", "Endgame" };
         string nextLevelName = scenesList[levelNum];
         Debug.Log("Loading: " + nextLevelName);
         GetComponent<SteamVR_LoadLevel>().levelName = nextLevelName;
         GetComponent<SteamVR_LoadLevel>().Trigger();
-        //Invoke("LoadNextLevel", 6f);
     }
 
     void StopMusic()
@@ -40,18 +49,13 @@ public class GameManager : MonoBehaviour
         FindObjectOfType<MusicManager>().StopMusic();
     }
 
-    private void FadeToWhite()
+    private void FadeScreenOut()
     {
-        //set start color
-        SteamVR_Fade.Start(Color.clear, 0f);
-        //set and start fade to
-        SteamVR_Fade.Start(Color.white, _fadeDuration);
+        SteamVR_Fade.Start(Color.black, GetComponent<SteamVR_LoadLevel>().fadeOutTime, true);
     }
-    private void FadeFromWhite()
+    private void FadeScreenIn()
     {
-        //set start color
-        SteamVR_Fade.Start(Color.white, 0f);
-        //set and start fade to
-        SteamVR_Fade.Start(Color.clear, _fadeDuration);
+        SteamVR_Fade.Start(Color.black, 0f, true);
+        SteamVR_Fade.Start(Color.clear, GetComponent<SteamVR_LoadLevel>().fadeInTime, true);
     }
 }

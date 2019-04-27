@@ -4,7 +4,7 @@ using UnityEngine;
 public class MusicManager : MonoBehaviour
 {
     private float fadeInTime = 15f;
-    private float fadeOutTime = 6f;
+    private float fadeOutTime = 4f;
 
     void Start()
     {
@@ -13,17 +13,16 @@ public class MusicManager : MonoBehaviour
 
     public void StopMusic()
     {
-        //Debug.Log("Stopping Music");
+        Debug.Log("Stopping Music");
         StartCoroutine(FadeOut(GetComponent<AudioSource>(), fadeOutTime));
     }
 
     private static IEnumerator FadeOut(AudioSource audioSource, float FadeTime)
     {
-        float startVolume = audioSource.volume;
         while (audioSource.volume > 0)
         {
             //Debug.Log(audioSource.volume);
-            audioSource.volume -= startVolume * Time.deltaTime / FadeTime;
+            audioSource.volume -= Time.deltaTime / FadeTime;
             yield return null;
         }
         audioSource.Stop();
