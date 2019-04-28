@@ -6,6 +6,7 @@ public class PathScript : MonoBehaviour
     public Material matOn;
     public Material matOff;
     public bool isLeft = false;
+    public bool FirstBallHit { get; set; } = false;
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +40,7 @@ public class PathScript : MonoBehaviour
             Haptics haptics = FindObjectOfType<Haptics>();
             if (haptics != null)
             {
-                if (gameObject.GetComponentInParent<PathScript>().isLeft)
+                if (isLeft)
                     haptics.VibrateLeft(2f, 80, 5);
                 else
                     haptics.VibrateRight(2f, 80, 5);
@@ -47,10 +48,7 @@ public class PathScript : MonoBehaviour
         }
         if (transform.childCount == 1)
         {
-            if (isLeft) GameState.leftDone = true;
-            else GameState.rightDone = true;
-            FindObjectOfType<GameManager>().CheckWin();
-            Destroy(gameObject);
+            FindObjectOfType<GameManager>().GoToNextLevel();
             return;
         }
         transform.GetChild(1).gameObject.SetActive(false);
@@ -61,5 +59,8 @@ public class PathScript : MonoBehaviour
         if (transform.childCount >= 4)
             transform.GetChild(3).gameObject.SetActive(true);
         transform.GetChild(1).gameObject.GetComponent<Renderer>().material = matOn;
+
+        transform.GetChild(0).GetComponent<BallScript>().Explode();
+        FirstBallHit = false;
     }
 }

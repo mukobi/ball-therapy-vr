@@ -3,6 +3,14 @@
 public class BallScript : MonoBehaviour
 {
     public GameObject explosionPrefab;
+    private PathScript pathScript;
+    private PathManager pathManager;
+
+    private void Start()
+    {
+        pathScript = gameObject.GetComponentInParent<PathScript>();
+        pathManager = gameObject.GetComponentInParent<PathManager>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -10,12 +18,12 @@ public class BallScript : MonoBehaviour
         // Debug.Log("Look for " + triggerTag + ", found " + other.tag);
         if (other.tag == triggerTag && transform.GetSiblingIndex() == 0) 
         {
-            gameObject.GetComponentInParent<PathScript>().AdvancePath();
-            Explode();
+            pathScript.FirstBallHit = true;
+            pathManager.CheckSyncedPathTrigger();
         }
     }
 
-    private void Explode()
+    public void Explode()
     {
         Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);

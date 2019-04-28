@@ -14,18 +14,7 @@ public class GameManager : MonoBehaviour
         }
         else instance = this;
         FadeScreenIn();
-        GameState.leftDone = false;
-        GameState.rightDone = false;
     }
-    
-    public void CheckWin()
-    {
-        if(GameState.leftDone && GameState.rightDone)
-        {
-            GoToLevel(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-    }
-
 
     [ContextMenu("Go To Next Level")]
     public void GoToNextLevel()
