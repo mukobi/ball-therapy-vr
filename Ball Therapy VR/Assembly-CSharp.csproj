@@ -198,9 +198,9 @@
     <Compile Include="Assets\Scripts\CalibrationScript.cs" />
     <Compile Include="Assets\Scripts\CustomRenderQueue.cs" />
     <Compile Include="Assets\Scripts\EndRestartScript.cs" />
-    <Compile Include="Assets\Scripts\Follow.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GameState.cs" />
+    <Compile Include="Assets\Scripts\HandFollow.cs" />
     <Compile Include="Assets\Scripts\Haptics.cs" />
     <Compile Include="Assets\Scripts\MusicManager.cs" />
     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
