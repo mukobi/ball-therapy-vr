@@ -27,9 +27,4 @@ public class HandFollow : MonoBehaviour
         lineRenderer.SetPosition(0, toFollow.transform.position);
         lineRenderer.SetPosition(1, gameObject.transform.position);
     }
-
-    private void OnDestroy()
-    {
-        Debug.Log(gameObject.name + " just got destroyed :(");
-    }
 }

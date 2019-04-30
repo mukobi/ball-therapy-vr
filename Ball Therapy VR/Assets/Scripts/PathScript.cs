@@ -9,6 +9,10 @@ public class PathScript : MonoBehaviour
     public GameObject explosionPrefab;
     public bool FirstBallHit { get; set; } = false;
 
+    private readonly float hapticMaxAmp = 1;
+    private readonly int numVisibleOrbs = 5;
+    private Haptics haptics;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,44 +28,42 @@ public class PathScript : MonoBehaviour
             childTransf.position = scaled;
             childTransf.position.Set(scaled.x, scaled.y, scaled.z);
         }
-        transform.GetChild(0).gameObject.SetActive(true);
-        transform.GetChild(0).gameObject.GetComponent<Renderer>().material = matOn;
-        transform.GetChild(1).gameObject.SetActive(true);
-        transform.GetChild(2).gameObject.SetActive(true);
+        ColorOrbs(0, numVisibleOrbs);
+        haptics = FindObjectOfType<Haptics>();
     }
 
     // triggered when the next ball in the path to be hit is hit
     public void AdvancePath()
     {
-
         transform.GetChild(0).GetComponent<BallScript>().Explode();
         float diffBallTime = Time.time - timeLastBall;
         timeLastBall = Time.time;
-        //Debug.Log("BT: " + diffBallTime);
-        if(diffBallTime < 1f)  // too fast
+        Debug.Log("BT: " + diffBallTime);
+        if(diffBallTime < 1.8f)
         {
-            Haptics haptics = FindObjectOfType<Haptics>();
-            if (haptics != null)
-            {
-                if (isLeft)
-                    haptics.VibrateLeft(2f, 160, 1 - diffBallTime);
-                else
-                    haptics.VibrateRight(2f, 160, 1 - diffBallTime);
-            }
+            if (isLeft)
+                haptics.VibrateLeft(2f, 160, hapticMaxAmp / diffBallTime);
+            else
+                haptics.VibrateRight(2f, 160, hapticMaxAmp / diffBallTime);
         }
         if (transform.childCount == 1)
         {
             FindObjectOfType<GameManager>().GoToNextLevel();
             return;
         }
-        transform.GetChild(1).gameObject.SetActive(false);
-        transform.GetChild(1).gameObject.SetActive(true);
-        //Debug.Log(transform.childCount);
-        if (transform.childCount >= 3)
-            transform.GetChild(2).gameObject.SetActive(true);
-        if (transform.childCount >= 4)
-            transform.GetChild(3).gameObject.SetActive(true);
-        transform.GetChild(1).gameObject.GetComponent<Renderer>().material = matOn;
+        ColorOrbs(1, 1 + numVisibleOrbs);
         FirstBallHit = false;
+    }
+
+    private void ColorOrbs(int startIndex, int endIndex)
+    {
+        transform.GetChild(startIndex).gameObject.GetComponent<Renderer>().material = matOn;
+        transform.GetChild(startIndex).gameObject.SetActive(false);
+        transform.GetChild(startIndex).gameObject.SetActive(true);
+        for (int i = startIndex + 1; i < endIndex; i++)
+        {
+            if (transform.childCount >= i + 1)
+                transform.GetChild(i).gameObject.SetActive(true);
+        }
     }
 }

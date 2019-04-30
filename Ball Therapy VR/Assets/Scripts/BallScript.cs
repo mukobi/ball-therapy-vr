@@ -2,7 +2,9 @@
 
 public class BallScript : MonoBehaviour
 {
+    [HideInInspector]
     public GameObject explosionPrefab;
+
     private PathScript pathScript;
     private PathManager pathManager;
 
@@ -11,7 +13,6 @@ public class BallScript : MonoBehaviour
         pathScript = gameObject.GetComponentInParent<PathScript>();
         pathManager = gameObject.GetComponentInParent<PathManager>();
     }
-
     private void OnTriggerEnter(Collider other)
     {
         string triggerTag = gameObject.GetComponentInParent<PathScript>().isLeft ? "Left Controller" : "Right Controller";

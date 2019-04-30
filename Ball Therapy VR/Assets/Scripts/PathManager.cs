@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class PathManager : MonoBehaviour
 {
+    private PathScript first;
+    private PathScript second;
+    private void Start()
+    {
+        first = transform.GetChild(0).GetComponent<PathScript>();
+        second = transform.GetChild(1).GetComponent<PathScript>();
+    }
+
     public void CheckSyncedPathTrigger()
     {
-        PathScript first = transform.GetChild(0).GetComponent<PathScript>();
-        PathScript second = transform.GetChild(1).GetComponent<PathScript>();
         if (first.FirstBallHit &&
             second.FirstBallHit)
         {
