@@ -6,6 +6,7 @@ public class PathScript : MonoBehaviour
     public Material matOn;
     public Material matOff;
     public bool isLeft = false;
+    public GameObject explosionPrefab;
     public bool FirstBallHit { get; set; } = false;
 
     // Start is called before the first frame update
@@ -18,10 +19,10 @@ public class PathScript : MonoBehaviour
             Transform childTransf = transform.GetChild(i);
             childTransf.gameObject.SetActive(false);
             childTransf.gameObject.GetComponent<Renderer>().material = matOff;
-            Vector3 scaled = new Vector3(GameState.armSpan * childTransf.position.x, 2 * GameState.armSpan * childTransf.position.y, GameState.armSpan * childTransf.position.z);
+            childTransf.gameObject.GetComponent<BallScript>().explosionPrefab = explosionPrefab;
+            Vector3 scaled = new Vector3(GameState.armSpan * childTransf.position.x, GameState.armSpan * childTransf.position.y, childTransf.position.z);
             childTransf.position = scaled;
             childTransf.position.Set(scaled.x, scaled.y, scaled.z);
-            //Debug.Log(childTransf.position);
         }
         transform.GetChild(0).gameObject.SetActive(true);
         transform.GetChild(0).gameObject.GetComponent<Renderer>().material = matOn;

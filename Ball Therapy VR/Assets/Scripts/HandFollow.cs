@@ -5,13 +5,12 @@ using UnityEngine;
 public class HandFollow : MonoBehaviour
 {
     public GameObject toFollow;
-    private Vector3 offset;
+    public Vector3 offset;
     public float lerpFactor;
     private LineRenderer lineRenderer;
 
     void Start()
     {
-        offset = transform.position;
         // set up line renderer
         lineRenderer = gameObject.AddComponent<LineRenderer>();
         lineRenderer.material = gameObject.GetComponent<MeshRenderer>().material;

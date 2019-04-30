@@ -62,7 +62,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\PathManager.cs" />
     <Compile Include="Assets\Res\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
     <Compile Include="Assets\Res\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
     <Compile Include="Assets\Res\EffectExamples\Shared\Scripts\GunAim.cs" />
@@ -205,6 +204,7 @@
     <Compile Include="Assets\Scripts\Haptics.cs" />
     <Compile Include="Assets\Scripts\MusicManager.cs" />
     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Scripts\PathManager.cs" />
     <Compile Include="Assets\Scripts\PathScript.cs" />
     <Compile Include="Assets\Scripts\WinCanvasScript.cs" />
     <None Include="Assets\Res\PostProcessing\Resources\Shaders\DepthOfField.shader" />
