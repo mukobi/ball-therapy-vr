@@ -16,8 +16,6 @@ public class PathScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Debug.Log(gameObject.name);
-        //Debug.Log(transform.childCount);
         for (int i = 0; i < transform.childCount; i++)
         {
             Transform childTransf = transform.GetChild(i);
@@ -30,7 +28,7 @@ public class PathScript : MonoBehaviour
         haptics = FindObjectOfType<Haptics>();
     }
 
-    // triggered when the next ball in the path to be hit is hit
+    // triggered by parent PathManager when both paths have been hit
     public void AdvancePath()
     {
         transform.GetChild(0).GetComponent<BallScript>().Explode();
