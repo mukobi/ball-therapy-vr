@@ -22,8 +22,7 @@ public class CalibrationScript : MonoBehaviour
     }
     void FinishCalibration()
     {
-        float cameraRigScale = FindObjectOfType<SteamVR_PlayArea>().transform.localScale.x;
-        height = playerCamera.transform.position.y / cameraRigScale;
+        height = playerCamera.transform.position.y;
         Debug.Log("Height: " + height);
         doneCalibrating = true;
         GameState.armSpan = height / 2.0f;
