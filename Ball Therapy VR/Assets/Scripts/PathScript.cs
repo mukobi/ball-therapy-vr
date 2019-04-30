@@ -24,9 +24,7 @@ public class PathScript : MonoBehaviour
             childTransf.gameObject.SetActive(false);
             childTransf.gameObject.GetComponent<Renderer>().material = matOff;
             childTransf.gameObject.GetComponent<BallScript>().explosionPrefab = explosionPrefab;
-            Vector3 scaled = new Vector3(GameState.armSpan * childTransf.position.x, GameState.armSpan * childTransf.position.y, childTransf.position.z);
-            childTransf.position = scaled;
-            childTransf.position.Set(scaled.x, scaled.y, scaled.z);
+            childTransf.position = new Vector3(GameState.armSpan * childTransf.position.x, GameState.armSpan * childTransf.position.y, childTransf.position.z);
         }
         ColorOrbs(0, numVisibleOrbs);
         haptics = FindObjectOfType<Haptics>();
@@ -38,7 +36,6 @@ public class PathScript : MonoBehaviour
         transform.GetChild(0).GetComponent<BallScript>().Explode();
         float diffBallTime = Time.time - timeLastBall;
         timeLastBall = Time.time;
-        Debug.Log("BT: " + diffBallTime);
         if(diffBallTime < 1.8f)
         {
             if (isLeft)

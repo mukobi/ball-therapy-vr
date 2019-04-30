@@ -7,13 +7,13 @@ public class Haptics : MonoBehaviour
 
     public void VibrateLeft(float duration = 1f, float frequency = 160f, float amplitude = 75f)
     {
-        Debug.Log("Pulse Left");
+        //Debug.Log("Pulse Left");
         Pulse(duration, frequency, amplitude, SteamVR_Input_Sources.LeftHand);
     }
 
     public void VibrateRight(float duration = 1f, float frequency = 160f, float amplitude = 75f)
     {
-        Debug.Log("Pulse Right");
+        //Debug.Log("Pulse Right");
         Pulse(duration, frequency, amplitude, SteamVR_Input_Sources.RightHand);
     }
 
