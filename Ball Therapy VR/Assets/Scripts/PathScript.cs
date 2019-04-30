@@ -35,15 +35,15 @@ public class PathScript : MonoBehaviour
         float diffBallTime = Time.time - timeLastBall;
         timeLastBall = Time.time;
         //Debug.Log("BT: " + diffBallTime);
-        if(diffBallTime < 0.5f)  // too fast
+        if(diffBallTime < 1f)  // too fast
         {
             Haptics haptics = FindObjectOfType<Haptics>();
             if (haptics != null)
             {
                 if (isLeft)
-                    haptics.VibrateLeft(2f, 80, 5);
+                    haptics.VibrateLeft(2f, 160, 1 - diffBallTime);
                 else
-                    haptics.VibrateRight(2f, 80, 5);
+                    haptics.VibrateRight(2f, 160, 1 - diffBallTime);
             }
         }
         if (transform.childCount == 1)

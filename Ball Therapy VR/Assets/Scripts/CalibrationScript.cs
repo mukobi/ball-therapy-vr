@@ -15,7 +15,7 @@ public class CalibrationScript : MonoBehaviour
     {
         if (!doneCalibrating
             && SteamVR_Actions.default_InteractUI[SteamVR_Input_Sources.LeftHand].state
-            && SteamVR_Actions.default_InteractUI[SteamVR_Input_Sources.RightHand].state)  // interact buttons both pressed
+            && SteamVR_Actions.default_InteractUI[SteamVR_Input_Sources.RightHand].state)
         {
             FinishCalibration();
         }
