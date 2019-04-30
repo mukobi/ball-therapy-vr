@@ -1364,6 +1364,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 518096992}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &623058812 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4680124382933469627, guid: 0f062300b033b914ca2aea250c83ed9e,
+    type: 3}
+  m_PrefabInstance: {fileID: 6996893239755481753}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &654905871
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3120,7 +3126,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 623058812}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -4892,7 +4898,7 @@ MonoBehaviour:
   matOn: {fileID: 2100000, guid: 46df50251af4acf4a8c2bdaa7b67b554, type: 2}
   matOff: {fileID: 2100000, guid: da63407db9c3aa449979203d02cfbaac, type: 2}
   isLeft: 1
-  explosionPrefab: {fileID: 5165512586404381322, guid: aa20a5fdf36135d429d96dba6f4c9b0a,
+  explosionPrefab: {fileID: 3783130859336751964, guid: 7b9f3f369a20f244faf6c29a5bd362be,
     type: 3}
 --- !u!4 &3321447698960165345
 Transform:
@@ -4977,7 +4983,7 @@ MonoBehaviour:
   matOn: {fileID: 2100000, guid: 966d8d37273dea54b90db5bb81caec3a, type: 2}
   matOff: {fileID: 2100000, guid: da63407db9c3aa449979203d02cfbaac, type: 2}
   isLeft: 0
-  explosionPrefab: {fileID: 5165512586404381322, guid: 364ba0be0f9e0904aa9ccbc8e2d18cd1,
+  explosionPrefab: {fileID: 4355852148913764012, guid: 54d429243ece2ec41aacf4bc3bcc8211,
     type: 3}
 --- !u!4 &3569664241684705922
 Transform:
