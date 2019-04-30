@@ -33,6 +33,8 @@ public class PathScript : MonoBehaviour
     // triggered when the next ball in the path to be hit is hit
     public void AdvancePath()
     {
+
+        transform.GetChild(0).GetComponent<BallScript>().Explode();
         float diffBallTime = Time.time - timeLastBall;
         timeLastBall = Time.time;
         //Debug.Log("BT: " + diffBallTime);
@@ -60,8 +62,6 @@ public class PathScript : MonoBehaviour
         if (transform.childCount >= 4)
             transform.GetChild(3).gameObject.SetActive(true);
         transform.GetChild(1).gameObject.GetComponent<Renderer>().material = matOn;
-
-        transform.GetChild(0).GetComponent<BallScript>().Explode();
         FirstBallHit = false;
     }
 }
