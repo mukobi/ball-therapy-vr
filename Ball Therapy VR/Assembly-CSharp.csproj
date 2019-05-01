@@ -206,8 +206,8 @@
     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\PathManager.cs" />
     <Compile Include="Assets\Scripts\PathScript.cs" />
+    <Compile Include="Assets\Scripts\VOManager.cs" />
     <Compile Include="Assets\Scripts\WinCanvasScript.cs" />
-    <Compile Include="Assets\VOManager.cs" />
     <None Include="Assets\Res\PostProcessing\Resources\Shaders\DepthOfField.shader" />
     <None Include="Assets\Res\NatureStarterKit2\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
     <None Include="Assets\Res\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />

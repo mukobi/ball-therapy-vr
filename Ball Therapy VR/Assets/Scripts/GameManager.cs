@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     public void GoToLevel(int levelNum)
     {
         StopMusic();
+        PlayEndVO();
         FadeScreenOut();
         string[] scenesList = { "Calibration", "Level 1", "Level 2", "Level 3", "Level 4", "Endgame" };
         string nextLevelName = scenesList[levelNum];
@@ -36,6 +37,11 @@ public class GameManager : MonoBehaviour
     void StopMusic()
     {
         FindObjectOfType<MusicManager>().StopMusic();
+    }
+
+    void PlayEndVO()
+    {
+        FindObjectOfType<VOManager>().PlayEndClip();
     }
 
     private void FadeScreenOut()
