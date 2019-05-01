@@ -1237,7 +1237,7 @@ GameObject:
   - component: {fileID: 1894205303}
   - component: {fileID: 1894205302}
   m_Layer: 5
-  m_Name: TextMeshPro Text
+  m_Name: Instructions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1260,7 +1260,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 294.47, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1894205302
 MonoBehaviour:
@@ -1285,7 +1285,8 @@ MonoBehaviour:
   m_text: 'A Tai-Chi meditation app
 
 
-    Stand on the footprints, then pull both triggers to begin.'
+    Stand on the footprints with feet shoulder-width apart, then pull both triggers
+    to begin.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1354,10 +1355,10 @@ MonoBehaviour:
   m_margin: {x: -315.66913, y: -141.31544, z: -401.58023, w: 0}
   m_textInfo:
     textComponent: {fileID: 1894205302}
-    characterCount: 84
+    characterCount: 115
     spriteCount: 0
-    spaceCount: 14
-    wordCount: 14
+    spaceCount: 18
+    wordCount: 18
     linkCount: 0
     lineCount: 4
     pageCount: 1
