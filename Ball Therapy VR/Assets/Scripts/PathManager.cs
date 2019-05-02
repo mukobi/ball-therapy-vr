@@ -19,6 +19,20 @@ public class PathManager : MonoBehaviour
         {
             first.AdvancePath();
             second.AdvancePath();
+
+            if (transform.GetChild(0).transform.childCount <= 1 &&
+                transform.GetChild(1).transform.childCount <= 1)
+            {
+                GameManager[] allGameManagers = FindObjectsOfType<GameManager>();
+                foreach (GameManager gm in allGameManagers)
+                {
+                    if (gm.gameObject.scene == gameObject.scene)
+                    {
+                        gm.GoToNextLevel();
+                        return;
+                    }
+                }
+            }
         }
     }
 }

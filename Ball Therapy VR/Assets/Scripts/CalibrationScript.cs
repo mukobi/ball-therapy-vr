@@ -22,10 +22,18 @@ public class CalibrationScript : MonoBehaviour
     }
     void FinishCalibration()
     {
-        height = playerCamera.transform.position.y;
+        height = playerCamera.transform.localPosition.y;
         Debug.Log("Height: " + height);
         doneCalibrating = true;
-        GameState.armSpan = height / 2.0f;
-        FindObjectOfType<GameManager>().GoToLevel(SceneManager.GetActiveScene().buildIndex + 1);
+        GameState.armSpan = (height + 0.6f) / 2.0f;
+        GameManager[] allGameManagers = FindObjectsOfType<GameManager>();
+        foreach (GameManager gm in allGameManagers)
+        {
+            if (gm.gameObject.scene == gameObject.scene)
+            {
+                gm.GoToNextLevel();
+                return;
+            }
+        }
     }
 }

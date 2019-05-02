@@ -41,20 +41,18 @@ public class PathScript : MonoBehaviour
             else
                 haptics.VibrateRight(2f, 160, hapticMaxAmp / diffBallTime);
         }
-        if (transform.childCount == 1)
-        {
-            FindObjectOfType<GameManager>().GoToNextLevel();
-            return;
-        }
         ColorOrbs(1, 1 + numVisibleOrbs);
         FirstBallHit = false;
     }
 
     private void ColorOrbs(int startIndex, int endIndex)
     {
-        transform.GetChild(startIndex).gameObject.GetComponent<Renderer>().material = matOn;
-        transform.GetChild(startIndex).gameObject.SetActive(false);
-        transform.GetChild(startIndex).gameObject.SetActive(true);
+        if (transform.childCount > startIndex)
+        {
+            transform.GetChild(startIndex).gameObject.GetComponent<Renderer>().material = matOn;
+            transform.GetChild(startIndex).gameObject.SetActive(false);
+            transform.GetChild(startIndex).gameObject.SetActive(true);
+        }
         for (int i = startIndex + 1; i < endIndex; i++)
         {
             if (transform.childCount >= i + 1)

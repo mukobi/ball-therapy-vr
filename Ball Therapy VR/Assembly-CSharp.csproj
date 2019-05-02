@@ -196,6 +196,7 @@
     <Compile Include="Assets\Res\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\Scripts\BallScript.cs" />
     <Compile Include="Assets\Scripts\CalibrationScript.cs" />
+    <Compile Include="Assets\Scripts\CheatCodes.cs" />
     <Compile Include="Assets\Scripts\CustomRenderQueue.cs" />
     <Compile Include="Assets\Scripts\EndRestartScript.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />

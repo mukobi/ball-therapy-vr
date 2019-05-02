@@ -7,10 +7,18 @@ public class EndRestartScript : MonoBehaviour
     private bool done = false;
     void Update()
     {
-        if (!done && SteamVR_Input.GetBooleanAction("InteractUI").state)  // interact button pressed
+        if (!done && SteamVR_Actions.default_InteractUI[SteamVR_Input_Sources.LeftHand].state
+            && SteamVR_Actions.default_InteractUI[SteamVR_Input_Sources.RightHand].state)  // interact button pressed
         {
             done = true;
-            FindObjectOfType<GameManager>().GoToLevel(0);  // back to calibration
+            GameManager[] allGameManagers = FindObjectsOfType<GameManager>();
+            foreach (GameManager gm in allGameManagers)
+            {
+                if (gm.gameObject.scene == gameObject.scene)
+                {
+                    gm.GoToLevel(0);  // back to calibration
+                }
+            }
         }
     }
 }

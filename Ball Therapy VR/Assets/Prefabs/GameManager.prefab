@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3833502462435738058}
   - component: {fileID: 3833502462435738057}
-  - component: {fileID: 6116645958302832680}
+  - component: {fileID: 3307296001075577040}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208be59bb2b0c42438b8c18fc2b0c057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6116645958302832680
+--- !u!114 &3307296001075577040
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,7 +61,7 @@ MonoBehaviour:
   internalProcessArgs: 
   loadAdditive: 0
   loadAsync: 1
-  loadingScreen: {fileID: 8900000, guid: 757067a7c986c1340b901e6554af69ec, type: 3}
+  loadingScreen: {fileID: 2800000, guid: a8477083fc08d0b44b94f72f3df64c62, type: 3}
   progressBarEmpty: {fileID: 0}
   progressBarFull: {fileID: 0}
   loadingScreenWidthInMeters: 5
@@ -78,7 +78,7 @@ MonoBehaviour:
   backgroundColor: {r: 0, g: 0, b: 0, a: 1}
   showGrid: 0
   fadeOutTime: 5
-  fadeInTime: 3
+  fadeInTime: 0
   postLoadSettleTime: 0
   loadingScreenFadeInTime: 0
   loadingScreenFadeOutTime: 0
