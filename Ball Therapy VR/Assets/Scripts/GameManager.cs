@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
         GoToLevel(index);
     }
 
-    public void GoToLevel(int levelNum)
+    private void GoToLevel(int levelNum)
     {
         StartCoroutine(GoToLevelRoutine(levelNum));
     }
