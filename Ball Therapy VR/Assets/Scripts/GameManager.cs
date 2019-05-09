@@ -5,6 +5,7 @@ using Valve.VR;
 
 public class GameManager : MonoBehaviour
 {
+    private readonly string[] scenesList = { "Calibration", "Level 1", "Level 2", "Level 3", "Level 4", "Endgame" };
 
     private void Start()
     {
@@ -30,7 +31,7 @@ public class GameManager : MonoBehaviour
         int index;
         do
         {
-            index = random.Next(1, 5);
+            index = random.Next(1, scenesList.Length - 1);
         } while (index == GameState.lastLevelIndex);
         GameState.lastLevelIndex = index;
         GoToLevel(index);
@@ -55,7 +56,6 @@ public class GameManager : MonoBehaviour
 
         // need to yield a frame to destroy old GM before loading next
         yield return null;
-        string[] scenesList = { "Calibration", "Level 1", "Level 2", "Level 3", "Level 4", "Endgame" };
         if (levelNum < scenesList.Length)
         {
             StopMusic();
