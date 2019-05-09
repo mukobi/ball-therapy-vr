@@ -28,7 +28,7 @@ public class PathManager : MonoBehaviour
                 {
                     if (gm.gameObject.scene == gameObject.scene)
                     {
-                        gm.GoToNextLevel();
+                        gm.GoToStart();
                         return;
                     }
                 }
