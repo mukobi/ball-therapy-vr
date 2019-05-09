@@ -17,6 +17,12 @@ public class GameManager : MonoBehaviour
         GoToLevel(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    [ContextMenu("Go To Random Playable Level")]
+    public void GoToRandomPlayableLevel()
+    {
+        GoToLevel(new System.Random().Next(1,5));
+    }
+
     public void GoToLevel(int levelNum)
     {
         StartCoroutine(GoToLevelRoutine(levelNum));
