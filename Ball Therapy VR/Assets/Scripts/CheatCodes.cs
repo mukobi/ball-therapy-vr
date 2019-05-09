@@ -11,10 +11,10 @@ public class CheatCodes : MonoBehaviour
     private void Update()
     {
         if(!cheatActivated) { 
-            if (SteamVR_Actions.default_Teleport[SteamVR_Input_Sources.LeftHand].state &&
-                SteamVR_Actions.default_Teleport[SteamVR_Input_Sources.RightHand].state) // Teleport -> restart
+            if (SteamVR_Actions.default_GrabGrip[SteamVR_Input_Sources.LeftHand].state &&
+                SteamVR_Actions.default_GrabGrip[SteamVR_Input_Sources.RightHand].state) // grip -> restart
             {
-                Debug.Log("Double teleport");
+                Debug.Log("Double grip");
                 GameManager[] allGameManagers = FindObjectsOfType<GameManager>();
                 foreach (GameManager gm in allGameManagers)
                 {
@@ -25,10 +25,10 @@ public class CheatCodes : MonoBehaviour
                     }
                 }
             }
-            else if (SteamVR_Actions.default_GrabGrip[SteamVR_Input_Sources.LeftHand].state &&
-                        SteamVR_Actions.default_GrabGrip[SteamVR_Input_Sources.RightHand].state) // grip -> Next Level
+            else if (SteamVR_Actions.default_Teleport[SteamVR_Input_Sources.LeftHand].state &&
+                        SteamVR_Actions.default_Teleport[SteamVR_Input_Sources.RightHand].state) // teleport -> Next Level
             {
-                Debug.Log("Double grip");
+                Debug.Log("Double teleport");
                 GameManager[] allGameManagers = FindObjectsOfType<GameManager>();
                 foreach (GameManager gm in allGameManagers)
                 {
