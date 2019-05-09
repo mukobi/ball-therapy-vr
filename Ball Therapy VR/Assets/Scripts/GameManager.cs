@@ -26,7 +26,14 @@ public class GameManager : MonoBehaviour
     [ContextMenu("Go To Random Playable Level")]
     public void GoToRandomPlayableLevel()
     {
-        GoToLevel(new System.Random().Next(1,5));
+        System.Random random = new System.Random();
+        int index;
+        do
+        {
+            index = random.Next(1, 5);
+        } while (index == GameState.lastLevelIndex);
+        GameState.lastLevelIndex = index;
+        GoToLevel(index);
     }
 
     public void GoToLevel(int levelNum)
