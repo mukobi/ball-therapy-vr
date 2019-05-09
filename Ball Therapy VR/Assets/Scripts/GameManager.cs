@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        // need to yield a frame to destroy of GM before loading next
+        // need to yield a frame to destroy old GM before loading next
         yield return null;
         string[] scenesList = { "Calibration", "Level 1", "Level 2", "Level 3", "Level 4", "Endgame" };
         if (levelNum < scenesList.Length)

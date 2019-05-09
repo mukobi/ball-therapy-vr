@@ -31,7 +31,7 @@ public class CalibrationScript : MonoBehaviour
         {
             if (gm.gameObject.scene == gameObject.scene)
             {
-                gm.GoToNextLevel();
+                gm.GoToRandomPlayableLevel();
                 return;
             }
         }
