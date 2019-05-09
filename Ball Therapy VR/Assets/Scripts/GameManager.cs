@@ -11,6 +11,12 @@ public class GameManager : MonoBehaviour
         FadeScreenIn();
     }
 
+    [ContextMenu("Go To Start/Calibration")]
+    public void GoToStart()
+    {
+        GoToLevel(0);
+    }
+
     [ContextMenu("Go To Next Level")]
     public void GoToNextLevel()
     {

@@ -21,7 +21,7 @@ public class CheatCodes : MonoBehaviour
                     if (gm.gameObject.scene == gameObject.scene)
                     {
                         cheatActivated = true;
-                        gm.GoToLevel(0);
+                        gm.GoToStart();
                     }
                 }
             }

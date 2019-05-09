@@ -16,7 +16,7 @@ public class EndRestartScript : MonoBehaviour
             {
                 if (gm.gameObject.scene == gameObject.scene)
                 {
-                    gm.GoToLevel(0);  // back to calibration
+                    gm.GoToStart();  // back to calibration
                 }
             }
         }
