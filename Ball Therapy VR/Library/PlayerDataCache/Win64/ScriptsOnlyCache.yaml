@@ -37,10 +37,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -160,11 +158,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11688}
     - Class: 114
-      Script: {instanceID: 11754}
+      Script: {instanceID: 11750}
     - Class: 114
-      Script: {instanceID: 11826}
+      Script: {instanceID: 11756}
     - Class: 114
-      Script: {instanceID: 62028}
+      Script: {instanceID: 11828}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -259,7 +257,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11562}
     - Class: 114
-      Script: {instanceID: 62028}
+      Script: {instanceID: 11750}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -360,7 +358,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11562}
     - Class: 114
-      Script: {instanceID: 62028}
+      Script: {instanceID: 11750}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -465,7 +463,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11562}
     - Class: 114
-      Script: {instanceID: 62028}
+      Script: {instanceID: 11750}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -564,108 +562,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11562}
     - Class: 114
-      Script: {instanceID: 62028}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 135
-      Script: {instanceID: 0}
-    - Class: 136
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 198
-      Script: {instanceID: 0}
-    - Class: 199
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    Assets/Scenes/Level 4.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 54
-      Script: {instanceID: 0}
-    - Class: 74
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 82
-      Script: {instanceID: 0}
-    - Class: 83
-      Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
-    - Class: 91
-      Script: {instanceID: 0}
-    - Class: 95
-      Script: {instanceID: 0}
-    - Class: 96
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 9620}
-    - Class: 114
-      Script: {instanceID: 9734}
-    - Class: 114
-      Script: {instanceID: 9740}
-    - Class: 114
-      Script: {instanceID: 9746}
-    - Class: 114
-      Script: {instanceID: 9776}
-    - Class: 114
-      Script: {instanceID: 9790}
-    - Class: 114
-      Script: {instanceID: 9812}
-    - Class: 114
-      Script: {instanceID: 9962}
-    - Class: 114
-      Script: {instanceID: 10316}
-    - Class: 114
-      Script: {instanceID: 10512}
-    - Class: 114
-      Script: {instanceID: 10522}
-    - Class: 114
-      Script: {instanceID: 10700}
-    - Class: 114
-      Script: {instanceID: 10930}
-    - Class: 114
-      Script: {instanceID: 11138}
-    - Class: 114
-      Script: {instanceID: 11174}
-    - Class: 114
-      Script: {instanceID: 11176}
-    - Class: 114
-      Script: {instanceID: 11192}
-    - Class: 114
-      Script: {instanceID: 11288}
-    - Class: 114
-      Script: {instanceID: 11394}
-    - Class: 114
-      Script: {instanceID: 11562}
-    - Class: 114
-      Script: {instanceID: 62028}
+      Script: {instanceID: 11750}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -2463,6 +2360,12 @@ ScriptsOnlyBuild:
     className: TMPro_InstructionOverlay
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CheatCodes
+  - hash:
+      serializedVersion: 2
       Hash: fbcd6fc8130d7a7679bee806eb45c588
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -2629,19 +2532,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CheatCodes
   platform: 19
   scenePathNames:
   - Assets/Scenes/Calibration.unity
   - Assets/Scenes/Level 1.unity
   - Assets/Scenes/Level 2.unity
   - Assets/Scenes/Level 3.unity
-  - Assets/Scenes/Level 4.unity
   - Assets/Scenes/Endgame.unity
-  playerPath: C:/Users/Gabe/Documents/GitHub/ball-therapy-vr/releases/2019.05.01.2.All.Hands.VO.FIXED.Reloadable/Ball
+  playerPath: C:/Users/Gabe/Documents/GitHub/ball-therapy-vr/releases/2019.05.09.1.Conference.Demo/Ball
     Therapy VR.exe
