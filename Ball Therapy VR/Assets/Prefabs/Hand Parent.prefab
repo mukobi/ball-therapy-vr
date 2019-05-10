@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toFollow: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0.9}
+  offset: {x: 0, y: 0, z: 1.1}
   lerpFactor: 3.5
 --- !u!54 &4425303809610375976
 Rigidbody:

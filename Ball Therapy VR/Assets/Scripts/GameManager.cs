@@ -37,6 +37,12 @@ public class GameManager : MonoBehaviour
         GoToLevel(index);
     }
 
+    [ContextMenu("Go To End")]
+    public void GoToEnd()
+    {
+        GoToLevel(scenesList.Length - 1);
+    }
+
     private void GoToLevel(int levelNum)
     {
         StartCoroutine(GoToLevelRoutine(levelNum));

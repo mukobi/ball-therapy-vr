@@ -22,10 +22,9 @@ public class CalibrationScript : MonoBehaviour
     }
     void FinishCalibration()
     {
-        height = playerCamera.transform.localPosition.y;
-        Debug.Log("Height: " + height);
         doneCalibrating = true;
-        GameState.armSpan = height / 2.0f;
+        GameState.armSpan = playerCamera.transform.localPosition.y / 2.0f;
+        Debug.Log("Armspan: " + GameState.armSpan);
         GameManager[] allGameManagers = FindObjectsOfType<GameManager>();
         foreach (GameManager gm in allGameManagers)
         {
