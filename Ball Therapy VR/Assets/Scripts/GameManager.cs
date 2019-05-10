@@ -5,7 +5,7 @@ using Valve.VR;
 
 public class GameManager : MonoBehaviour
 {
-    private readonly string[] scenesList = { "Calibration", "Level 1", "Level 2", "Level 3", "Level 4", "Endgame" };
+    private readonly string[] scenesList = { "Calibration", "Level 1", "Level 2", "Level 3", "Endgame" };
 
     private void Start()
     {
