@@ -2539,5 +2539,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level 2.unity
   - Assets/Scenes/Level 3.unity
   - Assets/Scenes/Endgame.unity
-  playerPath: C:/Users/Gabe/Documents/GitHub/ball-therapy-vr/releases/2019.05.09.1.Conference.Demo/Ball
+  playerPath: C:/Users/Gabe/Documents/GitHub/ball-therapy-vr/releases/2019.05.11.1.Conference.Demo.VO.Fix/Ball
     Therapy VR.exe
